@@ -18,14 +18,14 @@ The project is a thin application where all the back-end operations, validations
 
 ### Architecture 
 
-![alt text](https://github.com/sehgalromal/CanadaTourismApplication/blob/master/Projects-Assets-Screenshots/image7.jpg?raw=true)
+![alt text](https://github.com/sehgalromalCanadaTourismApplication/blob/master/Projects-Assets-Screenshots/Architecture%26Flow-Diagrams/image7.jpg?raw=true)
 
 The architecture above explains how the application works by communicating with many other services internally. The user can access either web application or the mobile application. The application load balancer handles all the incoming traffic to the application., this load balancer is provided by Elastic Container Service. The load balancer internally also has a auto scaling feature where based on the metric provided by us it creates new instances of docker and shifts the load to the appropriate service. All the docker are instantiated by Elastic Bean Stalk, the EBS hosts multi container docker based on the Docker Aws configuration provided. Each docker instance represents a single microservice running on it. The AWS Cognito is used for user authentication and management and the DynamoDB is used for data store. 
 
 
 ### Authentication powered by Amazon Cognito
 
-![alt text](https://github.com/sehgalromal/CanadaTourismApplication/blob/master/Projects-Assets-Screenshots/image4.jpg?raw=true)
+![alt text](https://github.com/sehgalromal/CanadaTourismApplication/blob/master/Projects-Assets-Screenshots/Architecture%26Flow-Diagrams/image4.jpg?raw=true)
 
 ### Web Application 
 
