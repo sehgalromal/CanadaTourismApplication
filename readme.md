@@ -29,7 +29,9 @@ The architecture above explains how the application works by communicating with 
 
 ### Web Application 
 
-We developed the web application using HTML5, CSS3, Javascript and Bootstrap. The web application contains responsive web pages for searching the landmark, Description of landmark, Booking page and final ticket receipt and PDF page.  
+    We developed the web application using HTML5, CSS3, Javascript and Bootstrap. The web application contains responsive web pages for searching the 		    	landmark, Description of landmark, Booking page and final ticket receipt and PDF page.  
+
+   [Web Application Screenshots](sehgalromal/CanadaTourismApplication/tree/master/Projects-Assets-Screenshots/Web-Application-Screenshots)
 
     (1) Search/Home page 
     
