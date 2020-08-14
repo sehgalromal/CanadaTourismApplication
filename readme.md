@@ -1,20 +1,19 @@
-﻿# Assignment – 2 
+﻿# Canada Tourism Application 
 
-The Assignment’s primary goal is to apply usability & design principles for creating the UI of the Web Application. The User Interface is created from the already drawn wireframes in the Assignment-1.
+The cloud5409_TourismApp is Web and Mobile application which helps tourist to search for location with ease and book a ticket to that location. The system is light weight and secure mobile and web client, developed using cloud computing conventions and methods and is hosted on Amazon Web Services.The application provides users to search popular tourist destinations that will result the information of provincial/national parks, major beaches and popular cities nearby. The application has a booking services for the users to reserve their seat on the tourist bus that will cover all the tourist points. 
 
-### Deployment Link: https://a2-romal-sehgal.herokuapp.com/ 
-Created Web Pages For Assignment-2: 
-	##  Page-1: Landing Page Link: "https://a2-romal-sehgal.herokuapp.com/" 
-	##  Page-2: User Profile Page Link (Registration) Link: "https://a2-romal-sehgal.herokuapp.com/register" 
-	##  Page-3: Post Advertisement Page  Link: "https://a2-romal-sehgal.herokuapp.com/postad"
-	##  Page-4: About Us Page Link : "https://a2-romal-sehgal.herokuapp.com/about" 
+The project is a thin application where all the back-end operations, validations and other computations (such as scaling/load balancing) is be performed on AWS cloud. The application communicates with the cloud via API calls to microservices.
 
-* Date Created: 14 06 2020
-* Last Modification Date: 15 06 2020
+
+* Date Created: 03 30 2020
+* Last Modification Date: 08 13 2020
 
 ### Author
 
-* Romal Sehgal (rm359099@dal.ca) 
+* Romal Sehgal 
+* Hardik Dudhrejia 
+* Darpan Patel 
+* Vikash Salvi Manharlal 
 
 ### About Assignment-2 
 
