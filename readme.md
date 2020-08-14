@@ -8,7 +8,7 @@ The project is a thin application where all the back-end operations, validations
 * Date Created: 03 30 2020
 * Last Modification Date: 08 13 2020
 
-### Author
+### Contributers
 
 * Romal Sehgal 
 * Hardik Dudhrejia 
