@@ -86,35 +86,35 @@ The architecture above explains how the application works by communicating with 
     
     (1.) Search service 
     
-    	The data for 40 tourist places in Canada is stored in the AWS DynamoDB. The search API is implemented in Python Flask. Whenever a user searches a 		location, then the search API running on the Docker is called. This API returns all the details of the searched location for example, name of the place, 	 id, city and the detailed description of that place. 
+    	 The data for 40 tourist places in Canada is stored in the AWS DynamoDB. The search API is implemented in Python Flask. Whenever a user searches a 		 location, then the search API running on the Docker is called. This API returns all the details of the searched location for example, name of the place, 	   id, city and the detailed description of that place. 
     
     (2.) Description service
     
-    	The description service provides detaisl for all the tourist places. It fetces detail of a particular location and provides these details  to user 		interface and mobile application. It communicates with dynamo database to get relevant details. 
+    	 The description service provides detaisl for all the tourist places. It fetces detail of a particular location and provides these details  to user 		 interface and mobile application. It communicates with dynamo database to get relevant details. 
     
     (3.) Validation service
     
-    	The validation service performs varios validation on fileds like card number, source location, destination location, user name, date of travel, card 		expiry month, year and cvv number of the card. If the payment details is valid the booking is done for that user. 
+    	 The validation service performs varios validation on fileds like card number, source location, destination location, user name, date of travel, card 		 expiry month, year and cvv number of the card. If the payment details is valid the booking is done for that user. 
     
     (4.) Booking service
     
-    	The booking service is used for booking users ticket. It talks with dynamo database to store relevant fields and these fields can then be used to generate 	   ticket which is done by the next service. 
+    	 The booking service is used for booking users ticket. It talks with dynamo database to store relevant fields and these fields can then be used to  		 generate ticket which is done by the next service. 
     
     (5.) Ticket Generation service 
     
-    	After the payment made by the user is validated, the details of that particular user are stored in a different table in AWS DynamoDB. Ticket Generation 	API then fetches the user’s booking details from this table and returns the JSON result to the client side. This JSON response is then used to generate 	the UI of the ticket. This microservice is implemented in python Flask.  
+    	 After the payment made by the user is validated, the details of that particular user are stored in a different table in AWS DynamoDB. Ticket Generation 	  API then fetches the user’s booking details from this table and returns the JSON result to the client side. This JSON response is then used to generate 	   the UI of the ticket. This microservice is implemented in python Flask.  
 	
     (6.) PDF Generation service 
     
-    	For ticket generation, we have created REST API as microservices in Spring Boot. Application has generalized template in PDF format which can be edited in 	   future as per the requirements without affecting the other part of the application. To fill the PDF form programmatically in the application, we used 	 iTextPdf library in Java. All business logic in a ticket generation service API is covered with unit test. Following is the image for PDF. 
+    	 For ticket generation, we have created REST API as microservices in Spring Boot. Application has generalized template in PDF format which can be edited 	  in future as per the requirements without affecting the other part of the application. To fill the PDF form programmatically in the application, we used 	    iTextPdf library in Java. All business logic in a ticket generation service API is covered with unit test. Following is the image for PDF. 
 	
     (7.) Location service:
     
- 	This API returns all the 40 tourist locations stored in the database as a JSON array. This is used to populate the card view of the all the tourist places 	   on the home page. 
+ 	 This API returns all the 40 tourist locations stored in the database as a JSON array. This is used to populate the card view of the all the tourist 		 places on the home page. 
 	
     (8.) Encryption/Decryption
     
-   	All the communications performed between the client and cloud are secured. The encryption algorithm used in monoalphabetic cipher. Monoalphabetic cipher 	 is a substitution cipher which is based on a cipher key. The cipher alphabet for each alphabet in the plain text is fixed prior to the start of the 		encryption process. For example, if encrypted alphabet for “A” is “M” then everywhere in the plain text “A” will be substituted by “M”. The security of 	monoalphabetic cipher depends upon the secrecy of the key and hoe difficult a key is chosen.An advancement of monoalphabetic cipher is Polyalphabetic 		cipher where the same alphabet is substituted by different alphabets at different places in the plain text. 
+   	 All the communications performed between the client and cloud are secured. The encryption algorithm used in monoalphabetic cipher. Monoalphabetic cipher 	   is a substitution cipher which is based on a cipher key. The cipher alphabet for each alphabet in the plain text is fixed prior to the start of the 		 encryption process. For example, if encrypted alphabet for “A” is “M” then everywhere in the plain text “A” will be substituted by “M”. The security of 	  monoalphabetic cipher depends upon the secrecy of the key and hoe difficult a key is chosen.An advancement of monoalphabetic cipher is Polyalphabetic 	 cipher where the same alphabet is substituted by different alphabets at different places in the plain text. 
     
     
     
