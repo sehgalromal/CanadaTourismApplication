@@ -33,6 +33,8 @@ The architecture above explains how the application works by communicating with 
 
    [Web Application Screenshots](https://github.com/sehgalromal/CanadaTourismApplication/tree/master/Projects-Assets-Screenshots/Web-Application-Screenshots)
 
+    Web Pages:
+    
     (1) Search/Home page 
     
 	The homepage of the website is designed using HTML and jQuery. The styling of the contents in the homepage is done using bootstrap. The homepage consists 	  of a search bar on the top from where the user can search for different tourist locations. However, it also displays all the 40 tourist locations in the 	   form of a card view so that user can have a gist of all the places that are available on the website.
@@ -56,7 +58,27 @@ The architecture above explains how the application works by communicating with 
     (5) Tickets page 
     
         Once the payment is validated, the ticket is generated and shown to the user as below. The user can even download the ticket in the pdf form offline. 
+	
+### Mobile Application 
     
+    The Cloud5409 Tourism Mobile Application follows a thin client architecture that does all the processing on the server side. The application is composed of      	 various independent modules that communicate with a specific microservice.The mobile application uses Volley library to communicate with the microservices. It     	is an HTTP library that performs basic networking operations including establishing connections and sending requests to and fro from the server.
+    
+   [Mobile Application Screenshots](https://github.com/sehgalromal/CanadaTourismApplication/tree/master/Projects-Assets-Screenshots/Android-Application-Screenshots)
+ 
+    Android App Activities:
+    
+    (1) User Query Submission Activity:  
+    
+    	This is the starting point of the application where the user will search for a specific place or landmark by submitting a query. A get request is made 		using Volley and alongside with the submitted query as endpoint. The search microservice on receiving the request prepares the response corresponding to 	 the submitted query. The response is returned in the form of JSONArray which is then populated in the dropdown menu. When the user will clicks on a 		specific item from the dropdown, the application then redirects to Landmark Information activity. 
+    
+    (2) Landmark Information Activity:  
+    
+    	This activity will be responsible for communication with the description microservice that will return the response for a particular place or landmark as 	  submitted prior by the user during search.
+	
+    (3) User Authentication using AWS Cognito Cognito Mobile SDK:  
+    
+    	Before the integrating the AWS Cognito Service into the mobile application, user-pool was created to enable sign-in and sign-up services in the android. 	 After the user pool generation on AWS Cognito, the generated Cognito client ID, Cognito Client secret, Cognito Web domain can be used to create the 		instance of Auth with the userpool configuration and android app can be pointed to hosted UI pages of AWS Cognito. After UI pages are hosted, 			authentication handler is invoked which is responsible for validating the user on successful authentication, after user has entered their credentials on 	 sign-in page or have registered themselves if they are first-time user. After the successful authentication, a unique token is created associated with the 	    user. With the generated unique token, user could then proceed for booking ticket activity.  
+	
 
 
 
